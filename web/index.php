@@ -47,7 +47,7 @@ $app->post('/login', function(Silex\Application $app) {
     $statement = $db->query("SELECT * FROM users WHERE username = '$username' AND password = '$password'");
     $results = $statement->fetchAll();
     if(count($results) > 0) {
-        return "Authenticated";
+        return "Authenticated as " . $results[0]['username'];
     } else {
         return "Invalid username/password";
     }
