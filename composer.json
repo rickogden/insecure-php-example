@@ -1,0 +1,15 @@
+{
+  "name": "ricklab/insecure-php-app",
+  "description": "Example of bad practice for a PHP application",
+  "minimum-stability": "dev",
+  "license": "MIT License",
+  "authors": [
+    {
+      "name": "Rick Ogden",
+      "email": "r.l.ogden@salford.ac.uk"
+    }
+  ],
+  "require": {
+    "silex/silex": "~2.0"
+  }
+}
