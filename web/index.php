@@ -16,10 +16,13 @@ $app->get('/profile', function(Silex\Application $app){
     $statement = $db->query("SELECT * FROM users WHERE id = $id");
 
     $results = $statement->fetchAll();
-    var_dump($results);
+    $user = $results[0];
     return <<<EOF
     <dl>
-    <dt>Username:</dt><dd>
+    <dt>Username:</dt><dd>{$user['username']}</dd>
+    <dt>Email:</dt><dd>{$user['email']}</dd>
+    <dt>Full Name:</dt><dd>{$user['fullname']}</dd>
+    <dt>Bio:</dt><dd>{$user['bio']}</dd>
     </dl>
 EOF;
 });
